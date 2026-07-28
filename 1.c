@@ -1,19 +1,24 @@
 #include <stdio.h>
 
+//Defining the structure
 struct student{
     int reg_num;
-    char name[40],branch[10];
+    char name[40],branch[40];
 };
 
 int main(){
+    //Declaring the structure variable
     struct student s;
-    
-    printf("Enter your registration number: ");
+
+    //Taking input from the user
+    printf("Enter the register number: ");
     scanf("%d",&s.reg_num);
-    printf("Enter your name: ");
+    printf("Enter the name: ");
     scanf("%s",s.name);
-    printf("Enter your branch: ");
+    printf("Enter the branch: ");
     scanf("%s",s.branch);
 
-    printf("\n\tStudent Details\nRegister Number: %d\nName: %s\nBranch: %s",s.reg_num,s.name,s.branch);
+    //Printing the values
+    printf("\n\tStudent Details\nRegister number : %d\nName : %s\nBranch : %s",s.reg_num,s.name,s.branch);
+
 }

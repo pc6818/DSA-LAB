@@ -1,30 +1,37 @@
 #include <stdio.h>
 
+//Defining the inner structure
 struct address{
-    int door_no,pincode;
+    int door_num,pincode;
     char city[40];
 };
 
+//Defining the outer structure
 struct student{
     int reg_num;
-    char name[40],branch[10];
+    char name[40],branch[40];
     struct address add;
 };
 
 int main(){
+    //Declaring structure variable
     struct student s;
-    printf("Enter the register number: ");
+
+    //Taking input from the user
+    printf("Enter the Details\nRegister number : ");
     scanf("%d",&s.reg_num);
-    printf("Enter the name: ");
+    printf("Name : ");
     scanf("%s",s.name);
-    printf("Enter the branch: ");
+    printf("Branch : ");
     scanf("%s",s.branch);
-    printf("Enter the Door number: ");
-    scanf("%d",&s.add.door_no);
-    printf("Enter the city: ");
+    printf("Door number : ");
+    scanf("%d",&s.add.door_num);
+    printf("City : ");
     scanf("%s",s.add.city);
-    printf("Enter the pincode: ");
+    printf("Pincode : ");
     scanf("%d",&s.add.pincode);
 
-    printf("\t\nStudent Details\nRegister number: %d\nName: %s\nBranch: %s\nDoor number: %d\nCity: %s\nPincode: %d",s.reg_num,s.name,s.branch,s.add.door_no,s.add.city,s.add.pincode);
+    //Printing the details
+    printf("\n\tStudent Details\nRegister number: %d\nName: %s\nBranch: %s\nDoor number: %d\nCity: %s\nPincode: %d",s.reg_num,s.name,s.branch,s.add.door_num,s.add.city,s.add.pincode);
+
 }
